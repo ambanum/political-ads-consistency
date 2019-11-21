@@ -8,7 +8,7 @@
  */
 
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import ChartsPage from 'containers/ChartsPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
@@ -41,11 +41,8 @@ export default function App() {
   return (
     <div>
       <Switch>
-        <Route exact path="/">
-          <Redirect to="/political-ads/consistency" />
-        </Route>
         <Route
-          path="/political-ads/:lang?/consistency/:country?"
+          path="/political-ads-consistency/:lang/:country?"
           component={ChartsPage}
         />
         <Route component={NotFoundPage} />
