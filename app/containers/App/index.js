@@ -41,10 +41,7 @@ export default function App() {
   return (
     <div>
       <Switch>
-        <Route
-          path="/political-ads-consistency/:lang/:country?"
-          component={ChartsPage}
-        />
+        <Route path="/:lang/:country?" component={ChartsPage} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
